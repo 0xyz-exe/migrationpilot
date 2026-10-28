@@ -34,12 +34,23 @@ MigrationPilot helps backend developers, platform engineers, and DBAs catch dang
 
 ## 📦 Repository Details
 
-- **GitHub Repository:** [https://github.com/0xyz-exe/migrationpilot](https://github.com/0xyz-exe/migrationpilot)
-- **HTTPS Clone:** `git clone https://github.com/0xyz-exe/migrationpilot.git`
-- **SSH Clone:** `git clone git@github.com:0xyz-exe/migrationpilot.git`
-- **Default Branch:** `main`
-- **License:** Apache License 2.0
-- **Maintenance:** Active Open Source Project
+| Metric / Attribute | Specification |
+|---|---|
+| **Repository Name** | `migrationpilot` |
+| **Owner / Maintainer** | [`0xyz-exe`](https://github.com/0xyz-exe) |
+| **Repository URL** | [https://github.com/0xyz-exe/migrationpilot](https://github.com/0xyz-exe/migrationpilot) |
+| **Visibility** | Public (Open Source) |
+| **License** | [Apache License 2.0](LICENSE) |
+| **Default Branch** | `main` |
+| **Core Engine** | TypeScript 5.7+ (`pgsql-ast-parser`, Vitest) |
+| **Web UI & API** | React 19, Tailwind CSS v4, Vite 6, Node 26 `node:sqlite` |
+| **CLI Binary** | `@migrationpilot/cli` (`migrationpilot`) |
+| **PostgreSQL Targets** | PostgreSQL 12, 13, 14, 15, 16, 17 |
+| **Clone (HTTPS)** | `git clone https://github.com/0xyz-exe/migrationpilot.git` |
+| **Clone (SSH)** | `git clone git@github.com:0xyz-exe/migrationpilot.git` |
+| **Issues & Requests** | [https://github.com/0xyz-exe/migrationpilot/issues](https://github.com/0xyz-exe/migrationpilot/issues) |
+| **Pull Requests** | [https://github.com/0xyz-exe/migrationpilot/pulls](https://github.com/0xyz-exe/migrationpilot/pulls) |
+| **Security Reporting** | [SECURITY.md](SECURITY.md) |
 
 ---
 
