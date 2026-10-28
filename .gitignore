@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dist-server/
+.env
+.env.local
+migrationpilot.db
+migrationpilot.db-journal
+*.log
+coverage/
+.DS_Store
+Thumbs.db

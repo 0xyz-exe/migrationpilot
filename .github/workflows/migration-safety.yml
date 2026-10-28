@@ -1,0 +1,33 @@
+name: Migration Safety Check
+
+on:
+  pull_request:
+    paths:
+      - "migrations/**.sql"
+      - "examples/**.sql"
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.15.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile || pnpm install
+      - run: pnpm build
+      - name: Analyze Migrations with MigrationPilot
+        run: |
+          node packages/cli/bin/migrationpilot.js analyze ./examples \
+            --format sarif \
+            --output migrationpilot.sarif \
+            --fail-on critical || true
+      - name: Upload SARIF report to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: migrationpilot.sarif

@@ -1,0 +1,19 @@
+{
+  "tables": {
+    "users": {
+      "columns": ["id", "email", "created_at"],
+      "rowCount": 850000,
+      "sizeMb": 420
+    },
+    "orders": {
+      "columns": ["id", "customer_id", "total_amount", "created_at"],
+      "rowCount": 4200000,
+      "sizeMb": 1850
+    },
+    "customers": {
+      "columns": ["id", "name", "email"],
+      "rowCount": 620000,
+      "sizeMb": 310
+    }
+  }
+}

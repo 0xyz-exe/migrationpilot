@@ -1,0 +1,28 @@
+{
+  "name": "@migrationpilot/analyzer",
+  "version": "1.0.0",
+  "description": "PostgreSQL Migration Safety Analyzer Core Engine",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "pgsql-ast-parser": "^12.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  }
+}

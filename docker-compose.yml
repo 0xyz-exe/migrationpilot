@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  migrationpilot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: migrationpilot
+    ports:
+      - "3080:3080"
+    environment:
+      - PORT=3080
+      - NODE_ENV=production
+    volumes:
+      - migrationpilot-data:/app
+    restart: unless-stopped
+
+volumes:
+  migrationpilot-data:

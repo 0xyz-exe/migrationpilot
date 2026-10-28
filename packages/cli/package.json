@@ -1,0 +1,21 @@
+{
+  "name": "@migrationpilot/cli",
+  "version": "1.0.0",
+  "description": "MigrationPilot CLI - PostgreSQL Migration Safety Analyzer",
+  "type": "module",
+  "bin": {
+    "migrationpilot": "./bin/migrationpilot.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./bin/migrationpilot.js"
+  },
+  "dependencies": {
+    "@migrationpilot/analyzer": "workspace:*",
+    "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.7.3"
+  }
+}
